@@ -1,0 +1,39 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "==3.2.14"
+djangorestframework = "*"
+django-filter = "*"
+django-ckeditor = "*"
+django-decouple = "*"
+django-allauth = "*"
+django-crispy-forms = "*"
+django-widget-tweaks = "*"
+django-inlinecss = "*"
+django-captcha = "*"
+boto3 = "*"
+django-recaptcha = "*"
+xlsxwriter = "*"
+pillow = "*"
+django-cors-headers = "*"
+django-sslserver = "*"
+django-extensions = "*"
+djangorestframework-simplejwt = "*"
+django-import-export = "*"
+psycopg2-binary = "*"
+pysocks = "*"
+sendgrid = "*"
+dj-rest-auth = "*"
+flake8 = "*"
+joblib="*"
+scikit-learn="*"
+numpy="*"
+pandas="*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.10"

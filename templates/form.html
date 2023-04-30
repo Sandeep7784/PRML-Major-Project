@@ -1,0 +1,43 @@
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>ML Project</title>
+    <link href="{% static 'img/machine-learning-favicon.png' %}" rel="icon">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main_form.css' %}">  
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>    
+    <script src="{% static 'js/script.js' %}"></script>
+  </head>
+  
+  <body>
+
+    <!-- Header Section Start -->
+    <header id="home" class="hero-area">    
+      <div class="overlay">
+        <span></span>
+        <span></span>
+      </div>
+      <header id="header" class="fixed-top ">
+        <div class="container d-flex align-items-center justify-content-center">
+          <a href=""><h1 class="logo"><img src="{% static 'img/machine-learning2.png' %}" alt="" class="img-fluid">Speech Emotion Recognition</h1></a>
+        </div>
+      </header>
+      <form>
+        <div class="file-upload">
+          <h2>Select a .wav file to upload:</h2>
+          <label for="file-upload" id="file-upload-label">Choose file</label>
+          <input type="file" id="file-upload" name="file-upload" accept=".wav" onchange="showFileInfo()">
+          <p id="spacing"></p>
+          <p id="file-name"></p>
+          <p id="file-duration"></p>
+          <p id="file-size"></p>
+          <p id="file-format-warning"></p>
+          <div id="audio-player"></div>
+            <input type="submit" class="submit-button" value="Upload" id="submit-button" style="display: none;">
+        </div>
+      </form>
+        
+      
