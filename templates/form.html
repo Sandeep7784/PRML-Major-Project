@@ -90,6 +90,50 @@
               <div class="sticker-container">
                 <img class="sticker" src="{% static 'img/disgust_mind.jpg' %}" alt="Disgust sticker">
               </div>
+              {% elif result == "angry" %}
+              <div class="result-info">
+                <p class="result-text">This audio has been classified as</p>
+                <p class="result-type-angry">Angry</p>
+              </div>
+              <div class="quote-container">
+                <div class="quote">"For every minute you remain angry, you give up sixty seconds of peace of mind."</div>
+              </div>
+              <div class="sticker-container">
+                <img class="sticker" src="{% static 'img/angry_mind.png' %}" alt="Angry sticker">
+              </div>
+              {% elif result == "neutral" %}
+              <div class="result-info">
+                <p class="result-text">This audio has been classified as</p>
+                <p class="result-type-neutral">Neutral</p>
+              </div>
+              <div class="quote-container">
+                <div class="quote">"The greatest glory in living lies not in never falling, but in rising every time we fall."</div>
+              </div>
+              <div class="sticker-container">
+                <img class="sticker" src="{% static 'img/neutral_mind.jpg' %}" alt="Neutral sticker">
+              </div>
+              {% elif result == "surprised" %}
+              <div class="result-info">
+                <p class="result-text">This audio has been classified as</p>
+                <p class="result-type-surprised">Surprised</p>
+              </div>
+              <div class="quote-container">
+                <div class="quote">"The best things in life are unexpected - because there were no expectations."</div>
+              </div>
+              <div class="sticker-container">
+                <img class="sticker" src="{% static 'img/surprised_mind.jpg' %}" alt="Surprised sticker">
+              </div>
+              {% elif result == "sad" %}
+              <div class="result-info">
+                <p class="result-text">This audio has been classified as</p>
+                <p class="result-type-sad">Sad</p>
+              </div>
+              <div class="quote-container">
+                <div class="quote">"We must understand that sadness is an ocean, and sometimes we drown, while other days we are forced to swim."</div>
+              </div>
+              <div class="sticker-container">
+                <img class="sticker" src="{% static 'img/sad_mind.jpg' %}" alt="Sad sticker">
+              </div>
             {% endif %}
             <div class="button-container">
               <div class="button-row">

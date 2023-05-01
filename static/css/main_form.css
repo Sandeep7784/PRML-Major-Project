@@ -248,6 +248,34 @@ a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
       color: #4B0082;
     }
 
+    .result-type-angry {
+      font-size: 2rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #FF5733;
+    }
+
+    .result-type-neutral {
+      font-size: 2rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #D3D3D3;
+    }
+
+    .result-type-sad {
+      font-size: 2rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #8C92AC;
+    }
+
+    .result-type-surprised {
+      font-size: 2rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #7DF9FF;
+    }
+
     .quote-container {
       margin-top: 1px;
     }
