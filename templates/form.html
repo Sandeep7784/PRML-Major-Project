@@ -15,29 +15,91 @@
   <body>
 
     <!-- Header Section Start -->
-    <header id="home" class="hero-area">    
-      <div class="overlay">
-        <span></span>
-        <span></span>
-      </div>
-      <header id="header" class="fixed-top ">
-        <div class="container d-flex align-items-center justify-content-center">
-          <a href=""><h1 class="logo"><img src="{% static 'img/machine-learning2.png' %}" alt="" class="img-fluid">Speech Emotion Recognition</h1></a>
+    {% if not result %}
+      <header id="home" class="hero-area">    
+        <div class="overlay">
+          <span></span>
+          <span></span>
         </div>
-      </header>
-      <form>
-        <div class="file-upload">
-          <h2>Select a .wav file to upload:</h2>
-          <label for="file-upload" id="file-upload-label">Choose file</label>
-          <input type="file" id="file-upload" name="file-upload" accept=".wav" onchange="showFileInfo()">
-          <p id="spacing"></p>
-          <p id="file-name"></p>
-          <p id="file-duration"></p>
-          <p id="file-size"></p>
-          <p id="file-format-warning"></p>
-          <div id="audio-player"></div>
-            <input type="submit" class="submit-button" value="Upload" id="submit-button" style="display: none;">
-        </div>
-      </form>
-        
+        <header id="header" class="fixed-top ">
+          <div class="container d-flex align-items-center justify-content-center">
+            <a href=""><h1 class="logo"><img src="{% static 'img/machine-learning2.png' %}" class="img-fluid">Speech Emotion Recognition</h1></a>
+          </div>
+        </header> 
+        <form>
+          {% csrf_token %}
+          <div class="file-upload">
+            <h2>Select a .wav file to upload:</h2>
+            <label for="file-upload" id="file-upload-label">Choose file</label>
+            <input type="file" id="file-upload" name="file-upload" accept=".wav" onchange="showFileInfo()">
+            <p id="spacing"></p>
+            <p id="file-name"></p>
+            <p id="file-duration"></p>
+            <p id="file-size"></p>
+            <p id="file-format-warning"></p>
+            <div id="audio-player"></div>
+              <input type="submit" class="submit-button" value="Upload" id="submit-button" style="display: none;">
+          </div>
+        </form>
+        {% endif %}
+
+        {% if result %}
+          <div class="emotion-result">
+            <h2>Result</h2>
+            {% if result == "calm" %}
+              <div class="result-info">
+                <p class="result-text">This audio has been classified as</p>
+                <p class="result-type-calm">Calm</p>
+              </div>
+              <div class="quote-container">
+                <div class="quote">"Calm mind brings inner strength and self-confidence, so that's very important for good health."</div>
+              </div>
+              <div class="sticker-container">
+                <img class="sticker" src="{% static 'img/calm_mind.jpg' %}" alt="Calm sticker">
+              </div>
+            {% elif result == "happy" %}
+              <div class="result-info">
+                <p class="result-text">This audio has been classified as</p>
+                <p class="result-type-happy">Happy</p>
+              </div>
+              <div class="quote-container">
+                <div class="quote">"The most important thing is to enjoy your life—to be happy—it's all that matters."</div>
+              </div>
+              <div class="sticker-container">
+                <img class="sticker" src="{% static 'img/happy_mind.jpg' %}" alt="Happy sticker">
+              </div>
+            {% elif result == "fearful" %}
+              <div class="result-info">
+                <p class="result-text">This audio has been classified as</p>
+                <p class="result-type-fearful">Fearful</p>
+              </div>
+              <div class="quote-container">
+                <div class="quote">"Courage is resistance to fear, mastery of fear, not absence of fear."</div>
+              </div>
+              <div class="sticker-container">
+                <img class="sticker" src="{% static 'img/fearful_mind.png' %}" alt="Fearful sticker">
+              </div>
+            {% elif result == "disgust" %}
+              <div class="result-info">
+                <p class="result-text">This audio has been classified as</p>
+                <p class="result-type-disgust">Disgust</p>
+              </div>
+              <div class="quote-container">
+                <div class="quote">"Disgust is the reflex of the soul at the approach of vile things."</div>
+              </div>
+              <div class="sticker-container">
+                <img class="sticker" src="{% static 'img/disgust_mind.jpg' %}" alt="Disgust sticker">
+              </div>
+            {% endif %}
+            <div class="button-container">
+              <div class="button-row">
+                <a href=""><button class="btn btn-primary">Check Again !!</button></a>
+                <a href="/" class="homepage-link"><button class="btn btn-secondary">Homepage</button></a>
+              </div>
+            </div>                
+          </div>
+        {% endif %}
+</body>
+</html>
+
       

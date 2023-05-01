@@ -65,7 +65,7 @@ a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
  /* ==========================================================================
      Navbar
      ========================================================================== */    
-  
+    
     #header {
     display: flex;
     justify-content: center;
@@ -167,7 +167,7 @@ a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
     .submit-button {
       background-color: #5533ff;
       border: none;
-      border-radius: 5px;
+      border-radius: 35px;
       color: #ffffff;
       cursor: pointer;
       font-size: 20px;
@@ -191,5 +191,140 @@ a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
       font-weight: bold;
     }
     
+    .emotion-result {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 30px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      max-height: auto;
+      width: 650px;
+      position: relative;
+    }
+    
+    .emotion-result h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+    
+    .result-info {
+      margin-bottom: 20px;
+    }
+    
+    .result-text {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+    
+    .result-type-calm {
+      font-size: 2rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #00b200;
+    }
+
+    .result-type-happy {
+      font-size: 2rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #FFD700;
+    }
+    
+    .result-type-disgust {
+      font-size: 2rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #8B0000;
+    }
+    
+    .result-type-fearful {
+      font-size: 2rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #4B0082;
+    }
+
+    .quote-container {
+      margin-top: 1px;
+    }
+    
+    .quote {
+      font-size: 1.2rem;
+      font-style: italic;
+      margin: 10px;
+      max-width: 400px;
+    }
+    
+    .sticker-container {
+      margin-top: 10px;
+    }
+    
+    .sticker {
+      max-width: 200px;
+    }
+  
+    .button-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 2px;
+    }
+    
+    .button-container a {
+      margin-top: 2px;
+    }
+    
+    .btn-primary {
+      background-color: #5533ff;
+      border: none;
+      border-radius: 35px;
+      color: #ffffff;
+      cursor: pointer;
+      font-size: 15px;
+      padding: 10px 20px;
+      transition: background-color 0.5s;
+      display: block;
+      margin: 20px auto 0 0; /* add margin to the right of the button */
+    }
+    
+    .btn-primary:hover {
+      background-color: #3700b3;
+      cursor: pointer;
+    }
+    
+    .btn-secondary {
+      background-color: #5533ff;
+      border: none;
+      border-radius: 35px;
+      color: #ffffff;
+      cursor: pointer;
+      font-size: 15px;
+      padding: 10px 20px;
+      transition: background-color 0.5s;
+      display: block;
+      margin: 20px auto 0;
+    }
+    
+    .btn-secondary:hover {
+      background-color: #3700b3;
+      cursor: pointer;
+    }
+    
+    .homepage-link {
+      margin-top: 10px;
+    }
+    
+    .button-row {
+      display: flex;
+      justify-content: center; /* align items horizontally in center */
+    }
+    
+    .button-row > *:not(:last-child) {
+      margin-right: 1rem; /* add margin to the right of the first button */
+    }
     
     
