@@ -26,7 +26,7 @@
             <a href=""><h1 class="logo"><img src="{% static 'img/machine-learning2.png' %}" class="img-fluid">Speech Emotion Recognition</h1></a>
           </div>
         </header> 
-        <form>
+        <form action="" method="post" enctype="multipart/form-data">
           {% csrf_token %}
           <div class="file-upload">
             <h2>Select a .wav file to upload:</h2>
